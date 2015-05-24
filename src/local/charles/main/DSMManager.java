@@ -8,6 +8,7 @@ public class DSMManager {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		/*
 		DSMWebService dsmws = new DSMWebService(args[0], args[1]);
 		try {
 			ArrayList<UserTransport> userlist = null;
@@ -23,6 +24,19 @@ public class DSMManager {
 		UserTransport ut = null;
 		
 		dsmws.close();
+		*/
+		
+		SyslogServerThread st = new SyslogServerThread(520);
+		st.start();	
+		
+		while(true) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 
 	}
 
